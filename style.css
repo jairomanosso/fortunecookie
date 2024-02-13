@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-main-color: #34355B;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    font-size: 1.6rem;
+    background: rgb(25,3,97);
+    background: linear-gradient(61deg, rgba(25,3,97,1) 0%, rgba(187,0,255,1) 100%);
+    height: 100vh;
+}
+
+h1,
+h2,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+ 
+#main-screen,
+#reset-screen {
+    width: min(42.8rem, 90%);
+    background-color: white;
+    padding: 6.4rem;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    color: var(--font-main-color);
+}
+
+#main-screen h1,
+#reset-screen h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+#main-screen p {
+    font-family: "DM Sans", sans-serif;
+    margin-bottom: 2rem;
+}
+
+#fortune-cookie {
+    max-width: 19.2rem;
+}
+
+#fortune-cookie:hover{
+    animation: vibrate-1 0.3s linear infinite both;
+    cursor: pointer;
+}
+
+#today-luck{
+    background-color: #E4EDF1;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 2rem;
+}
+
+#today-luck p {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.4rem;
+}
+
+#btn-reset {
+    background-color: #FF9500;
+    color: white;
+    border: none;
+    border-radius: .4rem;
+    padding: 1.6rem;
+    margin-top: 2rem;
+    transition: background .3s;
+    cursor: pointer;
+}
+
+#btn-reset:hover{
+    background-color: #e68703;
+}
+
+.scale-in-bottom {
+	animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* animations */
+
+@keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes scale-in-bottom {
+    0% {
+      transform: scale(0);
+      transform-origin: 50% 100%;
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 100%;
+      opacity: 1;
+    }
+  }
